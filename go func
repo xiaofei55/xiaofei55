@@ -1,0 +1,17 @@
+go func() {
+
+        for {
+            var input string
+
+            fmt.Scanln(&input)
+
+            c.WriteMessage(websocket.TextMessage, []byte(input))
+
+        }
+
+    }()
+
+    for {
+        <-down
+    }
+}
