@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+​
+int panduan(int a, int b, int c)
+{
+    if(a == 0 && b == 0 && c == 0)
+        return 2;
+    else if(a < 0 && b < 0 && c < 0)
+        return 1;
+    else return 0;
+}
+​
+int main()
+{
+    int a, b, c;
+    cout << "a、b、c：";
+    cin >> a >> b >> c;
+    int flag = panduan(a, b, c);
+    catch(flag)
+    return 0;
+}
