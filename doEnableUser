@@ -1,0 +1,15 @@
+protected void doEnableUser(String userId) throws UserProfileResourceException { 
+ 
+		//This is not an allowed operation.If this is not the case add the code to 
+    // implement it 
+		System.out.println("SampleUserManagerImpl.doEnableUser - This operation is not implemented !");  
+	 
+	} 
+   
+	protected User doGetAnonymousUser() throws UserProfileResourceException { 
+		return new SampleUserImpl(); 
+	} 
+   
+	protected User doGetUser(String userId) throws UserProfileResourceException { 
+ 
+		User aUser = null; 
