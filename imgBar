@@ -1,0 +1,16 @@
+
+void updateWindow() {
+    BeginBatchDraw();
+ 
+    putimage(0, 0, &imgBg);
+    putimagePNG(250, 0, &imgBar);
+ 
+    for (int i = 0; i < ZHI_WU_COUT; i++) {
+        int x = 338 + i * 64;
+        int y = 6;
+        putimage(x, y, &imgCards[i]);
+    }
+ 
+    if (curZhiWu > 0) { 
+        IMAGE* img = imgZhiWu[curZhiWu - 1][0];
+        putimagePNG(curX - img->getwidth() * 0.5, curY - img->getheight() * 0.5, img);
