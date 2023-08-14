@@ -1,0 +1,15 @@
+
+@Configuration(proxyBeanMethods = false)
+public class DefaultSecurityConfig {
+ 
+ 
+    @Order(2)
+    public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http)
+            throws Exception {
+        http
+                .authorizeHttpRequests((authorize) -> authorize
+                        .requestMatchers(new AntPathRequestMatcher("/actuator/**"),
+                                new AntPathRequestMatcher("/oauth2/**"),
+                                new AntPathRequestMatcher("/**/*.json"),
+                                new AntPathRequestMatcher("/**/*.html")).permitAll()
+                        .anyRequest().authenticated()
