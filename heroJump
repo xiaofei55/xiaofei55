@@ -1,0 +1,19 @@
+ for (int i = 0; i < 12;i++)
+    {
+		//res/hero1.png ~ hero12.png
+        sprintf(name,"res/hero%d.png",i + 1);
+        loadimage(&imgHeros[1],name);
+    
+    }
+    heroX = WIN_WIDTH * 0.5 - imgHeros[0].getwidth() *0.5;
+    heroY = 345 - imgHeros[0].getheight();
+    heroIndex = 0;
+    heroJump = false；
+    jumpHeightMax =  345 - imgHeros[0].getheight() - 120;
+    updata = true;
+     loadimage(&imgTortoise,"res/t1.png");
+    torTooiseExist = false;
+    torToiseY = 345 - imgTortoise.getheight() +5;
+    heroJumpOff = -4;
+    
+}
